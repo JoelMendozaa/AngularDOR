@@ -1,0 +1,61 @@
+<div class="container text-center">
+  <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0">
+          <img src="assets/images/logo.svg" alt="logo">
+        </a>
+        <ul class="nav">
+          <li><a href="#" class="nav-link px-2">Collections</a></li>
+          <li><a href="#" class="nav-link px-2">Men</a></li>
+          <li><a href="#" class="nav-link px-2">Women</a></li>
+          <li><a href="#" class="nav-link px-2">About</a></li>
+          <li><a href="#" class="nav-link px-2">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="col-12 pb-2">
+    <!-- Búsqueda-->
+    <gifs-search-box></gifs-search-box>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="product-container">
+        <div class="col-12 pt-2">
+          <!-- Listado de Gifs -->
+          <gifs-card-list [gifs]="gifs"></gifs-card-list>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <h1>Sneaker Company</h1>
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they'll withstand everything the weather can offer.
+      </p>
+      <div>
+        <h3>$125.00</h3>
+        <span class="badge">50% OFF</span>
+      </div>
+      <del>$250.00</del>
+
+      <div class="cart-controls">
+        <div class="quantity">
+          <button id="decrement" (click)="decrementarCantidad()">
+            <img src="assets/images/icon-minus.svg" alt="Quitar">
+          </button>
+          <span id="quantity">{{ cantidad }}</span>
+          <button id="increment" (click)="incrementarCantidad()">
+            <img src="assets/images/icon-plus.svg" alt="Añadir">
+          </button>
+        </div>
+        <button class="add-to-cart" (click)="agregarAlCarrito()">
+          <img src="assets/images/icon-cart.svg" alt="Carrito"> Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

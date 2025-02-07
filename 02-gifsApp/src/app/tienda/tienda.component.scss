@@ -1,0 +1,169 @@
+// Variables
+$primary-color: #f7f8fd;
+$secondary-color: #ff7e1b;
+$text-color: #1d2026;
+$border-radius: 10px;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+// Estilos existentes
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 30px;
+
+  .nav {
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: #69707D;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: #1D2026;
+      }
+    }
+  }
+}
+
+h1 {
+  color: #FF7E1B;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1D2026;
+}
+
+p {
+  color: #69707D;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #1D2026;
+  margin-bottom: 10px;
+}
+
+.badge {
+  background-color: #FFEEE2;
+  color: #FF7E1B;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+del {
+  color: #B6BCC8;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; // Cambiado de space-between
+  margin-top: 20px;
+  gap: 15px; // Añadido para separar los elementos
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  padding: 10px;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  span {
+    margin: 0 15px;
+    font-weight: bold;
+    color: $text-color;
+  }
+}
+
+.add-to-cart {
+  background-color: #ff7e1b;
+  color: white;
+  border: none;
+  padding: 12px 20px; // Reducido de 18px 30px
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px; // Reducido de 15px
+  flex: 0 1 auto; // Cambiado de flex: 1 para que no se expanda
+  font-size: 0.9rem; // Añadido para reducir el tamaño del texto
+
+  &:hover {
+    background-color: lighten(#ff7e1b, 10%);
+  }
+
+  img {
+    margin-right: 5px; // Reducido de 10px
+    width: 16px; // Añadido para reducir el tamaño del icono
+    height: 16px; // Añadido para reducir el tamaño del icono
+  }
+}
+
+.purchase {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .cart-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quantity {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .purchase {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

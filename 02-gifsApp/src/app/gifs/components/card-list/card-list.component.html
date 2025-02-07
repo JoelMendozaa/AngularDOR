@@ -1,0 +1,12 @@
+<div class="row gifs-grid">
+    <div *ngFor="let gif of gifs | slice:0:6" class="col-6">
+      <div class="gif-card">
+        <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="gif-image">
+        <div class="gif-info">
+          <p class="gif-title">{{ gif.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
